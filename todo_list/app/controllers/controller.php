@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ .'/../models/tarefas.php';
+require_once __DIR__ .'/../models/tarefa.php';
 
 class TarefasController{
     private $tarefaModel;
@@ -17,8 +17,8 @@ class TarefasController{
     }
 
     public function excluir(){
-        if(isset($_GET['delete'])){
-            $this->tarefaModel->excluir($_GET['delete']);
+        if(isset($_GET['id'])){
+            $this->tarefaModel->excluir($_GET['id']);
         }
         header('location: index.php');
     }
